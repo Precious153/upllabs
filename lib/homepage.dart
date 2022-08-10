@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'details.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -502,49 +504,55 @@ class HomePage extends StatelessWidget {
                               child: Image.asset('images/on1.jpeg')),
                         ),
                         SizedBox(width: 10,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Dr.Ronald Richard',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400
-                              ),),
-                            SizedBox(height: 5,),
-                            Text('Dental Specialist',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400
-                              ),),
-                            Row(
-                              children: [
-                                Icon(Icons.star,
-                                  color: Color(0xffFFD700),),
-                                Text('4.9',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400
-                                  ),),
-                                SizedBox(width: 10,),
-                                Icon(
-                                  Icons.timer,
-                                  color: Colors.grey,
-                                ),
-                                SizedBox(width: 5,),
-                                Text('(10am-12pm)',style:TextStyle(
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=> Detail()));
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Dr.Ronald Richard',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400
+                                ),),
+                              SizedBox(height: 5,),
+                              Text('Dental Specialist',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
                                     fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.grey
-                                ),)
-                              ],
-                            )
-                          ],
+                                    fontWeight: FontWeight.w400
+                                ),),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,
+                                    color: Color(0xffFFD700),),
+                                  Text('4.9',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400
+                                    ),),
+                                  SizedBox(width: 10,),
+                                  Icon(
+                                    Icons.timer,
+                                    color: Colors.grey,
+                                  ),
+                                  SizedBox(width: 5,),
+                                  Text('(10am-12pm)',style:TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey
+                                  ),)
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
