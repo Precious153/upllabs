@@ -20,11 +20,12 @@ class Detail extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.elliptical(30, 20),
                           bottomRight: Radius.elliptical(250, 100)),
-                        // image: DecorationImage(
-                        //     // image: AssetImage('images/on1.jpeg',),
-                        //     alignment:Alignment.bottomRight,
-                        //     scale: 0.9
-                        // ),
+                        image: DecorationImage(
+                            image: AssetImage('images/doctor.jpg',
+                            ),
+                            alignment:Alignment.bottomRight,
+                            scale: 0.9
+                        ),
                     ),
                     child: Column(
                       children: [
