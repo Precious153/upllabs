@@ -43,8 +43,8 @@ class _OnBoardingState extends State<OnBoarding> {
           width: double.infinity,
           child: Column(
             children: [
-              Expanded(
-                flex: 5,
+              Container(
+                height: MediaQuery.of(context).size.height /1.4,
                 child: PageView.builder(
                   onPageChanged: (index){
                     setState(() {
@@ -60,24 +60,25 @@ class _OnBoardingState extends State<OnBoarding> {
                         text: sliders[index]['text'] as String,),
                 ),
               ),
-              SizedBox(height: 30),
-              Expanded(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                          sliders.length, (index) => buildSliderNav(index: index)),
-                    ),
-                  ],
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                        sliders.length, (index) => buildSliderNav(index: index)),
+                  ),
+                ],
 
-                ),
               ),
+              SizedBox(height: 40.0,),
               Padding(
                 padding: EdgeInsets.all(0),
                 child:selectedSlider == 2 ?
 
-                OnboardButton() : null,
+                Align(
+                  alignment: Alignment.bottomCenter,
+                    child: OnboardButton()) : null,
               ),
             ],
           ),
@@ -106,7 +107,7 @@ class OnboardButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 20, right: 20, bottom: 40),
+      padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       child: ElevatedButton(
           onPressed:(){
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));

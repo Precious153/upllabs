@@ -37,8 +37,8 @@ class SliderContent extends StatelessWidget {
           ],
         ),
 
+SizedBox(height: 10.0,),
 
-        Spacer(),
         Text(
           title,
           textAlign: TextAlign.center,
@@ -48,7 +48,7 @@ class SliderContent extends StatelessWidget {
             color: Colors.black
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 5),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 13),
           child: Text(

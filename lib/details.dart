@@ -140,16 +140,18 @@ class Detail extends StatelessWidget {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
-                    child: Text("A dentist, also known as a dental surgeon,\n"
-                        " is a health care professional who specializes in \ndentistry"
-                        " (the diagnosis, prevention, management, and treatment of diseases"
-                        "and conditions of the \noral cavity and other aspects of "
-                        "the craniofacial complex including the temporomandibular joint)",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                        color: Colors.black
-                    ),),
+                    child: Center(
+                      child: Text("A dentist, also known as a dental surgeon,\n"
+                          " is a health care professional who specializes in \ndentistry"
+                          " (the diagnosis, prevention, management, and treatment of diseases"
+                          "and conditions of the \noral cavity and other aspects of "
+                          "the craniofacial complex including the temporomandibular joint)",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Colors.black
+                      ),),
+                    ),
                   ),
                   SizedBox(height: 10,),
                   Row(
